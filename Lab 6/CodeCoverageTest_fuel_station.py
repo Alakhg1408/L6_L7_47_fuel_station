@@ -109,3 +109,7 @@ def test_night_mode_warning():
 
 def test_night_mode_timed_out():
     assert session_status(40, True, True) == "timed_out"
+
+
+def test_gold_loyalty_extra_over_30_litres():
+    assert fuel_bill("regular", 50, "gold") == 3325
